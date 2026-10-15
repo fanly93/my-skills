@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/fanly93/my-skills",
+  "default_ref": "main",
+  "skills": [
+    {
+      "name": "handdrawn-image-ppt",
+      "title": "手绘图片型 PPT",
+      "path": "skills/handdrawn-image-ppt",
+      "description": "用于米白纸纹、铅笔线稿、低饱和彩铅配色的中文培训、产品介绍、业务方案和补充幻灯片，尤其适合由图像模型生成整页幻灯片的任务。",
+      "tags": ["手绘", "彩铅", "米白纸纹", "中文", "培训", "产品介绍", "业务方案", "PPT", "幻灯片", "hand-drawn", "presentation"],
+      "use_when": [
+        "用户需要米白纸张、铅笔线条和彩铅分区的手绘风格幻灯片",
+        "制作中文培训、产品介绍、客户方案或原稿补充页",
+        "使用图像模型生成风格一致的整页 PNG 并交付图片版 PPTX"
+      ],
+      "not_for": [
+        "仅凭本技能不能交付文字和图形逐项可编辑的原生 PPT，需结合演示文稿能力重建",
+        "要求照片、3D、霓虹科技风等其他视觉风格",
+        "缺少图像生成能力时，仅安装文件不能完成整页图片生成"
+      ],
+      "outputs": ["整页幻灯片 PNG", "图片版 PPTX", "PNG ZIP", "实际提示词记录"],
+      "dependencies": {
+        "image_generation": "Codex imagegen，或当前任务指定且已授权的图片供应商",
+        "pptx_packaging": ["presentations Skill 及其 container_tools", "Node.js", "@oai/artifact-tool", "Python"],
+        "runtime_discovery": "Codex 工作区依赖发现工具；其他环境须提供等价运行时并验证兼容性",
+        "optional": ["PowerShell：仅调用 Windows invoke_imagegen.ps1 包装器时需要"]
+      }
+    }
+  ]
+}

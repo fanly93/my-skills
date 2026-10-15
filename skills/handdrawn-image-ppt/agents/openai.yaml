@@ -1,0 +1,4 @@
+interface:
+  display_name: "手绘图片型 PPT 生成"
+  short_description: "按统一手绘风格生成培训、产品介绍与业务方案 PPT"
+  default_prompt: "Use $handdrawn-image-ppt to create a Chinese training or product deck with cream paper, pencil sketches and pastel colored pencils."
